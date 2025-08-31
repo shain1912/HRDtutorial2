@@ -1,0 +1,106 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.page-header {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-header h1 {
+  margin: 0;
+}
+
+.btn-logout {
+  background: red;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.add-user-section {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+}
+
+.add-user-section h2 {
+  margin-top: 0;
+}
+
+.add-form input {
+  width: 200px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  margin: 5px;
+}
+
+.btn-add {
+  background: green;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.users-list-section {
+  background: white;
+  padding: 20px;
+  border: 1px solid #ddd;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.user-table th,
+.user-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.user-table th {
+  background: #333;
+  color: white;
+}
+
+.actions {
+  display: flex;
+  gap: 5px;
+}
+
+.btn-edit {
+  background: blue;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  min-width: 50px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.btn-delete {
+  background: red;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  min-width: 50px;
+  font-size: 14px;
+  box-sizing: border-box;
+}

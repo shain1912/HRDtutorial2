@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Error - <%= status %></title>
+    <link rel="stylesheet" href="/css/error.css" />
+  </head>
+  <body>
+    <div class="error-container">
+      <div class="error-icon">😱</div>
+      
+      <div class="error-info">
+        <h1>오류 발생</h1>
+        <h2>상태 코드: <%= status %></h2>
+        <p class="error-message"><%= message %></p>
+      </div>
+      
+      <div class="error-actions">
+        <a href="/" class="btn btn-primary">홈으로 돌아가기</a>
+        <a href="javascript:history.back()" class="btn btn-secondary">이전 페이지</a>
+      </div>
+      
+      <% if (typeof stack !== 'undefined') { %>
+      <div class="error-stack">
+        <h3>개발자 정보:</h3>
+        <pre><%= stack %></pre>
+      </div>
+      <% } %>
+    </div>
+  </body>
+</html>

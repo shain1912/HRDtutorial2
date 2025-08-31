@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/users.css" />
+  </head>
+  <body>
+    <div class="page-header">
+      <h1><%= title %></h1>
+      <form action="/auth/logout" method="POST" class="logout-form">
+        <button type="submit" class="btn-logout">로그아웃</button>
+      </form>
+    </div>
+
+    <div class="add-user-section">
+      <h2>사용자 추가</h2>
+      <form action="/users" method="POST" class="add-form">
+        <input type="text" name="username" placeholder="사용자명" required>
+        <input type="password" name="password" placeholder="비밀번호" required>
+        <input type="email" name="email" placeholder="이메일" required>
+        <input type="tel" name="phone" placeholder="전화번호" required>
+        <button type="submit" class="btn-add">추가</button>
+      </form>
+    </div>
+
+    <div class="users-list-section">
+      <h2>사용자 목록</h2>
+      <table class="user-table">
+        <thead>
+          <tr>
+            <th>사용자ID</th>
+            <th>사용자명</th>
+            <th>이메일</th>
+            <th>전화번호</th>
+            <th>작업</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% users.forEach(user => { %>
+          <tr>
+            <td><%= user.userid %></td>
+            <td><%= user.username %></td>
+            <td><%= user.email %></td>
+            <td><%= user.phone %></td>
+            <td class="actions">
+              <a href="/users/<%= user.userid %>" class="btn btn-view">조회</a>
+              <a href="/users/<%= user.userid %>/edit" class="btn btn-edit">수정</a>
+              <form action="/users/<%= user.userid %>?_method=DELETE" method="POST" class="delete-form">
+                <button type="submit" class="btn btn-delete" onclick="return confirm('정말 삭제하시겠습니까?')">삭제</button>
+              </form>
+            </td>
+          </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="partials-section">
+      <h2>include (partials)</h2>
+      <div>
+        <%- include('../partials/alert', { type: 'info', title: '알림', message:
+        '이 영역은 partial에서 온 HTML입니다.' }) %>
+      </div>
+    </div>
+  </body>
+</html>

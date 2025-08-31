@@ -1,0 +1,72 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f0f0;
+  margin: 0;
+  padding: 50px;
+}
+
+.error-container {
+  background: white;
+  padding: 40px;
+  max-width: 600px;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.error-info h1 {
+  color: red;
+  margin-bottom: 10px;
+}
+
+.error-info h2 {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.error-message {
+  background: #ffcccc;
+  color: red;
+  padding: 15px;
+  margin: 20px 0;
+  border: 1px solid red;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin: 10px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary {
+  background: blue;
+  color: white;
+}
+
+.btn-secondary {
+  background: gray;
+  color: white;
+}
+
+.error-stack {
+  background: #f5f5f5;
+  padding: 20px;
+  margin-top: 30px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.error-stack h3 {
+  color: red;
+  margin-bottom: 10px;
+}
+
+.error-stack pre {
+  background: white;
+  padding: 15px;
+  border: 1px solid #ddd;
+  overflow-x: auto;
+}

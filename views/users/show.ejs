@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>사용자 정보</title>
+    <link rel="stylesheet" href="/css/users.css" />
+  </head>
+  <body>
+    <h1>사용자 정보</h1>
+
+    <div class="show-container">
+      <div class="user-info">
+        <div class="info-group">
+          <label>사용자 ID:</label>
+          <span><%= user.userid %></span>
+        </div>
+
+        <div class="info-group">
+          <label>사용자명:</label>
+          <span><%= user.username %></span>
+        </div>
+
+        <div class="info-group">
+          <label>이메일:</label>
+          <span><%= user.email %></span>
+        </div>
+
+        <div class="info-group">
+          <label>전화번호:</label>
+          <span><%= user.phone %></span>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <a href="/users/<%= user.userid %>/edit" class="btn btn-update">수정</a>
+        <a href="/users" class="btn btn-cancel">목록으로</a>
+      </div>
+    </div>
+  </body>
+</html>

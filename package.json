@@ -2,18 +2,26 @@
   "name": "tutorial",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "bin/www/index.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon app.js"
-    
+    "start": "node bin/www/index.js",
+    "dev": "nodemon bin/www/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^17.2.1",
+    "ejs": "^3.1.10",
     "express": "^5.1.0",
-    "ejs": "^3.1.10"
+    "express-async-handler": "^1.2.0",
+    "express-mysql-session": "^3.0.3",
+    "express-session": "^1.18.2",
+    "method-override": "^3.0.0",
+    "mysql2": "^3.14.3"
   },
   "devDependencies": {
     "nodemon": "^3.1.4"
