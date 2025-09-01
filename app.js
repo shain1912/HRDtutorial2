@@ -3,6 +3,9 @@ import path from "path";
 import { fileURLToPath } from "url";
 import methodOverride from "method-override";
 import session from "express-session";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 // 라우터 임포트
 import indexRouter from "./routes/index.js";
@@ -31,7 +34,7 @@ app.use(methodOverride("_method"));
 
 // 세션 미들웨어
 app.use(session({
-  secret: 'your-secret-key',
+  secret: process.env.SESSION_SECRET || 'your-secret-key',
   resave: false,
   saveUninitialized: false,
   cookie: { secure: false }
